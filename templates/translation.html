@@ -12,23 +12,28 @@
 <div id="a">
     <h1>transformers中英互译</h1>
     <pre></pre>
+    <select class="form-select" aria-label="Default select example" onchange="selectOnchang(this)">
+        <option selected>选择翻译模式</option>
+        <option value="1">英译中</option>
+        <option value="2">中译英</option>
+      </select>
     <form id="form1" class="row g-3" onsubmit="return false" method="post">
-        <div class="col-2">
-            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="请输入英文：">
-        </div>
-        <div class="col-auto">
-            <label for="inputPassword2" class="visually-hidden">Example：Hi,boy!</label>
-            <input type="text" name="sentence" class="form-control" id="inputPassword2"
-                   placeholder="例：天上有一只鸟在飞">
-        </div>
+        <div>
+            <div class="grid text-center">
+                <div class="mb-3 g-col-6">
+                    <textarea class="form-control" name="sentence" placeholder="请输入..." id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="mb-3 g-col-6">
+                    <textarea class="form-control"  readonly id="result" rows="3"></textarea>
+                </div>
+              </div>
+       
+    </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-3">提交</button>
         </div>
 
     </form>
-    <div class="col-auto">
-        结果：<span id="result"></span>
-    </div>
 </div>
 </body>
 </html>
@@ -39,15 +44,35 @@
     }
 </style>
 <script>
+    var a = 0;
+    function selectOnchang(obj){  
+        //获取被选中的option标签选项 
+        a = obj.selectedIndex
+       }
     $("button").click(function () {
-        $.ajax({
-            url: "/en2zh",
-            type: "POST",
-            data: $('#form1').serialize(),
-            success: function (result) {
-                // alert(result);
-                $('#result').html(result)
-            }
-        });
+        if(a==1){
+            $.ajax({
+                url: "/en2zh",
+                type: "POST",
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    // alert(result);
+                    $('#result').html(result)
+                }
+            });
+        }else if(a==2){
+            $.ajax({
+                url: "/zh2en",
+                type: "POST",
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    // alert(result);
+                    $('#result').html(result)
+                }
+            });
+        }else{
+            alert("请选择翻译模式！")
+        }
+        
     });
 </script>
