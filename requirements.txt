@@ -1,2 +1,5 @@
 transformers
 flask
+tensorFlow
+torch
+sentencepiece
