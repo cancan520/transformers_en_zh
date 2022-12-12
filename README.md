@@ -194,4 +194,4 @@ docker run -p 5000:5000 cancan520/transformer:1.0
 ![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-23-10.jpg?raw=true)
 
 停止服务（该步骤耗时较长）：
-docker stop registry.cn-hongkong.aliyuncs.com/lc1234/transformer:V1
+docker stop cancan520/transformer:1.0
