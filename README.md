@@ -150,7 +150,7 @@ CMD [ "python" , "app.py"]
 项目部署代码存放的GitHub仓库地址：https://github.com/cancan520/transformers_en_zh
 
 仓库地址截图：
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-28-54.jpg?raw=true)
+![result](https://raw.githubusercontent.com/cancan520/transformers_en_zh/main/Snipaste_2022-12-13_00-28-54.jpg)
 
 下载后，构建容器镜像：docker build . -t 容器名称
 
