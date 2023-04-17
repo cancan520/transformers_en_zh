@@ -150,7 +150,7 @@ CMD [ "python" , "app.py"]
 项目部署代码存放的GitHub仓库地址：https://github.com/cancan520/transformers_en_zh
 
 仓库地址截图：
-![result](https://raw.githubusercontent.com/cancan520/transformers_en_zh/main/Snipaste_2022-12-13_00-28-54.jpg)
+![result](images/Snipaste_2022-12-13_00-28-54.jpg)
 
 下载后，构建容器镜像：docker build . -t 容器名称
 
@@ -165,7 +165,7 @@ docker tag [ImageId] cancan520/transformers:1.0
 docker push cancan520/transformers:1.0
 
 查看DockerHub上传情况：
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-11-51.jpg?raw=true)
+![result](images/Snipaste_2022-12-13_00-11-51.jpg?raw=true)
 
 ## 应用服务运行
 
@@ -181,17 +181,17 @@ docker run -p 5000:5000 cancan520/transformer:1.0
 
 使用界面如下：
 
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-21-06.jpg?raw=true)
+![result](images/Snipaste_2022-12-13_00-21-06.jpg?raw=true)
 
 选择翻译模式：
 
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-21-24.jpg?raw=true)
+![result](images/Snipaste_2022-12-13_00-21-24.jpg?raw=true)
 
 英译中成果展示如下：
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-22-01.jpg?raw=true)
+![result](images/Snipaste_2022-12-13_00-22-01.jpg?raw=true)
 
 中译英成功展示如下：
-![result](https://github.com/cancan520/transformers_en_zh/blob/main/Snipaste_2022-12-13_00-23-10.jpg?raw=true)
+![result](images/Snipaste_2022-12-13_00-23-10.jpg?raw=true)
 
 停止服务（该步骤耗时较长）：
 docker stop cancan520/transformers:1.0
